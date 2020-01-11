@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        var items = [
+            {name:"zhangsan", age:"18", sex:"男"},
+            {name:"lisi", age:"19", sex:"男"},
+            {name:"mary", age:"17", sex:"女"}
+        ];
+
+        // 查找索引，找得到则返回索引值，找不到则返回-1
+        // console.log(items.findIndex(item => item.name == 'lisi'));
+        // console.log(items.findIndex(function(item){
+        //     return item.name == 'lisi1';
+        // }));
+        
+
+        // // splice 添加、删除数组中的元素 第二个参数如果写0意味着不删除
+        // items.splice(1, 0, {name:"wangwu", age:"19", sex:"男"},{name:"zhaoliu", age:"19", sex:"女"});
+        // console.log(items);
+        
+        // 查找是否存在，找到则返回当前元素，找不到则返回undefined
+        // console.log(items.find(item => item.name == 'lisi'));
+        // console.log(items.find(function(item){
+        //     return item.name == 'lisi1';
+        // }));
+
+       
+        // 过滤数据 如果匹配成功则返回匹配结果，如果过滤失败则返回空数组
+        console.log(items.filter(item => item.sex == '男'));
+        console.log(items.filter(function(item){
+            return item.sex == 'girl';
+        }));
+        
+    </script>
+</body>
+</html>
